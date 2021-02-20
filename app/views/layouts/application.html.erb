@@ -12,6 +12,15 @@
   </head>
 
   <body>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <%= link_to "Cocktails", cocktails_path, class: "navbar-brand"%>
+        <%= link_to "Add new cocktail", new_cocktail_path, class: "btn btn-success"%>
+      </div>
+    </nav>
+    <div class="banner">
+      <h1>cocktails</h1>
+    </div>
     <%= yield %>
   </body>
 </html>
