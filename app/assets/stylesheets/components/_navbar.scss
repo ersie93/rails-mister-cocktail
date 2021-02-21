@@ -12,7 +12,8 @@
 }
 
 .navbar {
-	position: sticky;
+	position: fixed;
 	top: 0;
-	background-opacity: 0.1;
+  width: 100%;
+	background-color: transparent; 
 }
