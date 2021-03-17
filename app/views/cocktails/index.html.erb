@@ -11,9 +11,9 @@
 <div class="container home-container">
   <div class="cocktails d-flex justify-content-around flex-wrap mt-4 mb-4">
     <% @cocktails.each do |cocktail|%>
-      <div class="card">
-        <div class="card-head text-center">
-          <h1><%= link_to cocktail.name, cocktail_path(cocktail)%></h1>
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.6),rgba(255,255,255,0.4)), url(<%= cl_image_path cocktail.photo.key %>)">
+        <div class="text-center">
+          <h2><%= link_to cocktail.name, cocktail_path(cocktail), class: "head"%></h2>
         </div>
         <div class="card-body">
           <ul>
