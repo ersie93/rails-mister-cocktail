@@ -1,15 +1,16 @@
 <div class="container-new" style="background-image: linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.3)) , url(https://res.cloudinary.com/ddkr8d6rd/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1613911130/oozfi76ewi3xjjzryp5d.jpg);">
 	<nav>
-		<%= link_to "Cocktails", cocktails_path, class: "navbar-brand" %>
+		<%= link_to "Cocktails", root_path, class: "navbar-brand" %>
 	</nav>
 	<div class="text-center new-title">
 		<h1 style="font-family: 'Lobster', cursive; color: white;">Create cocktail</h1>
 	</div>
 
-	<div class="container w-50 mt-5">
+	<div class="container w-50 mt-5" style="color: white;">
 		<div class="new-cocktail-container text-center align-self-center">
 		<%= simple_form_for(@cocktail) do |f| %>
 		  <%= f.input :name %>
+		  <%= f.input :photo, as: :file %>
 		  <%= f.submit class: "btn"%>
 		<% end %>
 	</div>

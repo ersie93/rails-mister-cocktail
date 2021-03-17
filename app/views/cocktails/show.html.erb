@@ -1,5 +1,7 @@
 <div class="d-flex container show-container justify-content-center">
-	<div class="card">
+	<div class="header" style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(255,255,255,0.4)), url('https://res.cloudinary.com/ddkr8d6rd/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1613936247/ciqsxvqoh9sghnu7dde9.jpg')">
+	</div>
+	<div class="card" style="margin-top: 150px; background-image: linear-gradient(rgba(0,0,0,0.6),rgba(255,255,255,0.4)), url(<%= cl_image_path @cocktail.photo.key %>)">
 		<div class="card-head text-center">
 			<h1><%=@cocktail.name%></h1>
 		</div>
@@ -11,8 +13,8 @@
 			</ul>
 		</div>
 		<div class="card-footer text-center">
-		 	<h4><%= link_to "Back", cocktails_path %></h4>
-		 	<h4><%= link_to "Add dose", new_cocktail_dose_path(@cocktail) %></h4>
+		 	<h4><%= link_to "Back", root_path, class: "card-link"%></h4>
+		 	<h4><%= link_to "Add dose", new_cocktail_dose_path(@cocktail), class: "card-link"%></h4>
 		</div>
 	</div>
 </div>
